@@ -17,5 +17,5 @@ def twoCitySchedCost(costs):
         min_cost += costs[i][0]+costs[i+n][1]
     return min_cost
 
-costs = [[10,20],[30,200],[400,50],[30,20]]
+costs = [[10,20],[30,200],[50,400],[20,30]]
 print(twoCitySchedCost(costs))
