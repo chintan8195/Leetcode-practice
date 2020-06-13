@@ -1,3 +1,5 @@
+from random import random
+
 '''
 // Init an empty set.
 RandomizedSet randomSet = new RandomizedSet();
@@ -43,6 +45,7 @@ class RandomizedSet:
             return False
         self.map[val]= len(self.array)
         self.array.append(val)
+        return True
 
     def remove(self, val: int) -> bool:
         """
@@ -50,9 +53,14 @@ class RandomizedSet:
         """
         if val in self.map:
             last, i = self.array[-1], self.map[val]
-            self.array[i], self.map[last]
+            self.array[i], self.map[last] = last, i
+            self.array.pop()
+            self.map.pop(val,0)
+            return True
+        return False
 
     def getRandom(self) -> int:
         """
         Get a random element from the set.
         """
+        return self.array[random.randint(0,len(self.array)-1)]
