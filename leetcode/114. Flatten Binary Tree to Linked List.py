@@ -32,7 +32,7 @@ class Node:
 def convert_tree_to_ll(root):
     while root:
         if root.left:
-           convert_tree_to_ll(root.left)
+            convert_tree_to_ll(root.left)
             tail = root.left
             while tail.right:
                 tail = tail.right

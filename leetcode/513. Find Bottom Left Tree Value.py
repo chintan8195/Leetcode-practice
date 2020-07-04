@@ -9,7 +9,7 @@
 #BFS 
 import collections 
 class Solution:
-    def findBottomLeftValue(self, root: TreeNode) -> int:
+    def findBottomLeftValue(self, root: TreeNode):
         q = collections.deque([root])
         result = root
         level = 0
@@ -27,7 +27,7 @@ class Solution:
 
 #DFS
 class Solution:
-    def findBottomLeftValue(self, root: TreeNode) -> int:
+    def findBottomLeftValue(self, root: TreeNode):
         self.ans = None
         self.max_level = -1
         self.dfs(root, 0)

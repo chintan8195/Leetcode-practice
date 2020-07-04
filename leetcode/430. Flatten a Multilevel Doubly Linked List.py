@@ -25,7 +25,7 @@ class Node:
         self.child = child
 
 class Solution:
-    def flatten(self, head: 'Node') -> 'Node': 
+    def flatten(self, head): 
         if not head:
             return head
         temp = Node(None,None,head, None)

@@ -22,7 +22,6 @@ def subarray_sum(s ,nums):
     return 0 if minimum_len == float("inf") else minimum_len
 
 nums = [2,3,1,2,4,3]
-
 print(subarray_sum(7, nums))
 
 nums = [1,1]

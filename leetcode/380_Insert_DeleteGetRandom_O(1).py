@@ -37,7 +37,7 @@ class RandomizedSet:
         self.map = {}
          
 
-    def insert(self, val: int) -> bool:
+    def insert(self, val: int):
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
         """
@@ -47,7 +47,7 @@ class RandomizedSet:
         self.array.append(val)
         return True
 
-    def remove(self, val: int) -> bool:
+    def remove(self, val: int):
         """
         Removes a value from the set. Returns true if the set contained the specified element.
         """
@@ -59,7 +59,7 @@ class RandomizedSet:
             return True
         return False
 
-    def getRandom(self) -> int:
+    def getRandom(self):
         """
         Get a random element from the set.
         """

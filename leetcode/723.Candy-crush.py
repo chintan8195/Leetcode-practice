@@ -66,7 +66,7 @@ def candyCrush(board):
     
     def gravity():
         for j in range(n):
-            stack = [board[i][j] for i in range(m-1,-1,-1) if board[i][j] >0
+            stack = [board[i][j] for i in range(m-1,-1,-1) if board[i][j] >0]
             stack += [0]*(m-len(stack))
             for i in range(m):
                 board[i][j] = stack.pop()
