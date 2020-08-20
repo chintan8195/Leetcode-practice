@@ -55,26 +55,54 @@ aabbbbaabbcd =>
 def candy_crush(s):
     stack = [['#',0]]
     for i in range(len(s)):
-        print(stack,s[i])
         if stack[-1][0] ==s[i]:
             stack[-1][1]+=1
         else:
             if stack[-1][1]>=3:
                 stack.pop()
-            if stack and stack[-1][0]!=s[i]:
+            if stack and stack[-1][0]==s[i]:
+                stack[-1][1] +=1
+            else:
                 stack.append([s[i],1])
     if stack[-1][1]>=3:
         stack.pop()
     result = ''.join(c*k for c,k in stack)
-    print(result)
     return result
 
 if __name__ == "__main__":
     assert candy_crush("aaabbbc") == "c"
-    # assert candy_crush("aabbbacd") == "cd"
+    assert candy_crush("aabbbacd") == "cd"
     assert candy_crush("baaabbbabbccccd") == "abbd"
     assert candy_crush("") == ""
     assert candy_crush("bbbbbbb") == ""
     assert candy_crush("aaabbbacd") == "acd"
     assert candy_crush("ccddccdcaacabbbaaccaccddcdcddd") == ""
-
+'''
+def candy_crush(input):
+    if not input:
+        return input
+    
+    stack = []
+    stack.append([input[0], 1])
+    
+    for i in range(1, len(input)):
+        if input[i] != input[i-1]:
+            if stack[-1][1] >= 3:
+                stack.pop()
+            if stack and stack[-1][0] == input[i]:
+                stack[-1][1] += 1
+            else:
+                stack.append([input[i], 1])
+        else:
+            stack[-1][1] += 1
+            
+    # handle end
+    if stack[-1][1] >= 3:
+        stack.pop()
+        
+    out = []
+    for ltrs in stack:
+        out += ltrs[0] * ltrs[1]
+    
+    return ''.join(out)
+'''

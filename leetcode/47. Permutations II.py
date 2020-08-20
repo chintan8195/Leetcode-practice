@@ -26,6 +26,6 @@ def dfs(array,path,visited,res):
             visited[i] = 0 
 
 def test():
-    assert permutations_unique([1,1,2])== [[1,1,2],[1,2,1],[2,1,1]],"Should be equal"
+    assert (permutations_unique([1,1,2])== [[1,1,2],[1,2,1],[2,1,1]]),"Should be equal"
 
 test()

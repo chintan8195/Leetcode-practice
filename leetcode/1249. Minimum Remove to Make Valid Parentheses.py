@@ -1,4 +1,4 @@
-def minRemoveToMakeValid(self, s: str) -> str:
+def minRemoveToMakeValid(self, s: str):
     if not s:
         return ""
     i = 0
