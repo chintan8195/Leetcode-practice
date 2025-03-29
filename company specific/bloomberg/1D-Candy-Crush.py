@@ -55,7 +55,7 @@ aabbbbaabbcd =>
 def candy_crush(s):
     stack = [['#',0]]
     for i in range(len(s)):
-        if stack[-1][0] ==s[i]:
+        if stack[-1][0] == s[i]:
             stack[-1][1]+=1
         else:
             if stack[-1][1]>=3:

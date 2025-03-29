@@ -1,3 +1,4 @@
 .metals
 /.vscode
 .gitignore
+.DS_Store
